@@ -5,6 +5,6 @@ version = "0.0.1"
 source = "greeter"
 
 [invoke.greet]
-target = ["greeter.Greeter"]
+target = ["greeter.greeter"]
 func = "setGreeting"
-args = ["wefhsi"]
+args = ["changed greeting"]

@@ -1,5 +1,10 @@
 name = "test-deploy"
 version = "0.0.1"
 
-[provision.dummy]
-source = "transparent-upgradable-proxy"
+[provision.greeter]
+source = "greeter"
+
+[invoke.greet]
+target = ["greeter.Greeter"]
+func = "setGreeting"
+args = ["wefhsi"]

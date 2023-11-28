@@ -7,4 +7,4 @@ source = "greeter"
 [invoke.greet]
 target = ["greeter.greeter"]
 func = "setGreeting"
-args = ["changed greeting"]
+args = ["changed greet yay"]

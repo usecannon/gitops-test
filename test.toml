@@ -2,9 +2,9 @@ name = "test-deploy"
 version = "0.0.1"
 
 [provision.greeter]
-source = "greeter"
+source = "greeter:2.10.0"
 
 [invoke.greet]
-target = ["greeter.greeter"]
+target = ["greeter.Greeter"]
 func = "setGreeting"
 args = ["changed greet yay"]

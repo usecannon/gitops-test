@@ -7,4 +7,4 @@ source = "greeter:2.10.0"
 [invoke.greet]
 target = ["greeter.Greeter"]
 func = "setGreeting"
-args = ["changed more"]
+args = ["changed one more time"]

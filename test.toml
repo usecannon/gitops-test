@@ -13,3 +13,16 @@ args = ["changed one more time"]
 target = ["greeter.Greeter"]
 func = "setGreeting"
 args = ["changed one last time"]
+
+[provision.synthetix]
+source = "synthetix:latest"
+owner = "<%= settings.owner %>"
+
+[invoke.createPool]
+target = ["synthetix.CoreProxy"]
+from = "<%= settings.user %>"
+func = "createPool"
+args = [
+    "1",
+    "<%= settings.owner %>"
+]

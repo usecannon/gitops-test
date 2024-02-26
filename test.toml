@@ -20,15 +20,12 @@ target = ["greeter.Greeter"]
 func = "setGreeting"
 args = ["changed one last time"]
 
-[provision.synthetix]
-source = "synthetix:latest"
-owner = "<%= settings.owner %>"
+[import.synthetix_omnibus]
+source ="synthetix-omnibus:latest"
 
-[invoke.createPool]
-target = ["synthetix.CoreProxy"]
-from = "<%= settings.user %>"
-func = "createPool"
+[contract.sample_integration]
+artifact = "SampleIntegration"
 args = [
-    "1",
-    "<%= settings.owner %>"
+    "<%= imports.synthetix_omnibus.contracts.system.CoreProxy %>",
+    "<%= imports.synthetix_omnibus.contracts.system.USDProxy %>"
 ]

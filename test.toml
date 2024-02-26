@@ -1,6 +1,12 @@
 name = "test-deploy"
 version = "0.0.1"
 
+[setting.owner]
+defaultValue="0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"
+
+[setting.user]
+defaultValue="0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"
+
 [provision.greeter]
 source = "greeter:2.10.0"
 

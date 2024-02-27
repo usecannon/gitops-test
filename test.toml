@@ -10,21 +10,21 @@ defaultValue="0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"
 [setting.accountId]
 defaultValue = "1"
 
-[provision.greeter]
-source = "greeter:2.10.0"
+[import.greeter]
+source = "greeter-foundry"
 
 [invoke.greet]
-target = ["greeter.Greeter"]
+target = ["greeter.greeter"]
 func = "setGreeting"
 args = ["changed one more time"]
 
 [invoke.secondGreet]
-target = ["greeter.Greeter"]
+target = ["greeter.greeter"]
 func = "setGreeting"
 args = ["changed one last time"]
 
 [invoke.cloneGreeter]
-target = ["greeter.Greeter"]
+target = ["greeter.greeter"]
 func = "doCloning"
 
 factory.cloned.event = "NewClonedGreeter"
@@ -32,7 +32,7 @@ factory.cloned.arg = 0
 factory.cloned.artifact = "Greeter"
 
 [invoke.change_clone_greeting]
-target = ["greeter.Greeter"]
+target = ["greeter.greeter"]
 func = "changeCloneGreeting"
 args = ["<%= contracts.cloned.address %>", "<%= formatBytes32String('New Greeting!') %>"]
 
@@ -45,7 +45,7 @@ extra.OldCloneGreeting.arg = 0
 extra.OldCloneGreeting.artifact = "Greeter"
 
 [invoke.clone_iterative]
-target = ["greeter.Greeter"]
+target = ["greeter.greeter"]
 func = "doCloningIteratively"
 args = ["2"]
 
@@ -59,6 +59,6 @@ extra.NewClonedGreeterEvent.arg = 0
 extra.NewClonedGreeterEvent.expectCount = 2
 
 [invoke.change_last_clone_greeting]
-target = ["greeter.Greeter"]
+target = ["greeter.greeter"]
 func = "changeCloneGreeting"
 args = ["<%= extras.NewClonedGreeterEvent_1 %>", "<%= formatBytes32String('Newest Greeting!') %>"]

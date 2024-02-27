@@ -23,14 +23,42 @@ target = ["greeter.Greeter"]
 func = "setGreeting"
 args = ["changed one last time"]
 
-[import.synthetix]
-source = "synthetix:latest@main"
+[invoke.cloneGreeter]
+target = ["greeter.Greeter"]
+func = "doCloning"
 
-# User creates account
-[invoke.createAccount]
-target = ["synthetix.CoreProxy"]
-from = "<%= settings.user %>"
-func = "createAccount(uint128)"
-args = ["<%= settings.accountId %>"]
-extras.accountId.event = "AccountCreated"
-extras.accountId.arg = 0
+factory.cloned.event = "NewClonedGreeter"
+factory.cloned.arg = 0
+factory.cloned.artifact = "Greeter"
+
+[invoke.change_clone_greeting]
+target = ["greeters.greeter"]
+func = "changeCloneGreeting"
+args = ["<%= contracts.cloned.address %>", "<%= formatBytes32String('New Greeting!') %>"]
+
+extra.NewCloneGreeting.event = "NewGreetingAdded"
+extra.NewCloneGreeting.arg = 0
+extra.NewCloneGreeting.artifact = "Greeter"
+
+extra.OldCloneGreeting.event = "OldGreetingRemoved"
+extra.OldCloneGreeting.arg = 0
+extra.OldCloneGreeting.artifact = "Greeter"
+
+[invoke.clone_iterative]
+target = ["greeters.greeter"]
+func = "doCloningIteratively"
+args = ["2"]
+
+factory.clonedWithIter.event = "NewClonedGreeter"
+factory.clonedWithIter.arg = 0
+factory.clonedWithIter.artifact = "Greeter"
+factory.clonedWithIter.expectCount = 2
+
+extra.NewClonedGreeterEvent.event = "NewClonedGreeter"
+extra.NewClonedGreeterEvent.arg = 0
+extra.NewClonedGreeterEvent.expectCount = 2
+
+[invoke.change_last_clone_greeting]
+target = ["greeters.greeter"]
+func = "changeCloneGreeting"
+args = ["<%= extras.NewClonedGreeterEvent_1 %>", "<%= formatBytes32String('Newest Greeting!') %>"]

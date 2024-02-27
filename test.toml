@@ -32,7 +32,7 @@ factory.cloned.arg = 0
 factory.cloned.artifact = "Greeter"
 
 [invoke.change_clone_greeting]
-target = ["greeters.greeter"]
+target = ["greeter.Greeter"]
 func = "changeCloneGreeting"
 args = ["<%= contracts.cloned.address %>", "<%= formatBytes32String('New Greeting!') %>"]
 
@@ -45,7 +45,7 @@ extra.OldCloneGreeting.arg = 0
 extra.OldCloneGreeting.artifact = "Greeter"
 
 [invoke.clone_iterative]
-target = ["greeters.greeter"]
+target = ["greeter.Greeter"]
 func = "doCloningIteratively"
 args = ["2"]
 
@@ -59,6 +59,6 @@ extra.NewClonedGreeterEvent.arg = 0
 extra.NewClonedGreeterEvent.expectCount = 2
 
 [invoke.change_last_clone_greeting]
-target = ["greeters.greeter"]
+target = ["greeter.Greeter"]
 func = "changeCloneGreeting"
 args = ["<%= extras.NewClonedGreeterEvent_1 %>", "<%= formatBytes32String('Newest Greeting!') %>"]

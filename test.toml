@@ -7,6 +7,9 @@ defaultValue="0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"
 [setting.user]
 defaultValue="0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"
 
+[setting.accountId]
+defaultValue = "1"
+
 [provision.greeter]
 source = "greeter:2.10.0"
 
@@ -20,12 +23,14 @@ target = ["greeter.Greeter"]
 func = "setGreeting"
 args = ["changed one last time"]
 
-[import.synthetix_omnibus]
-source ="synthetix-omnibus:latest"
+[provision.synthetix]
+source = "synthetix:latest@main"
 
-[contract.sample_integration]
-artifact = "SampleIntegration"
-args = [
-    "<%= imports.synthetix_omnibus.contracts.system.CoreProxy %>",
-    "<%= imports.synthetix_omnibus.contracts.system.USDProxy %>"
-]
+# User creates account
+[invoke.createAccount]
+target = ["synthetix.CoreProxy"]
+from = "<%= settings.user %>"
+func = "createAccount(uint128)"
+args = ["<%= settings.accountId %>"]
+extras.accountId.event = "AccountCreated"
+extras.accountId.arg = 0

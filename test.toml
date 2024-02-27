@@ -23,7 +23,7 @@ target = ["greeter.Greeter"]
 func = "setGreeting"
 args = ["changed one last time"]
 
-[provision.synthetix]
+[import.synthetix]
 source = "synthetix:latest@main"
 
 # User creates account

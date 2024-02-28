@@ -31,3 +31,8 @@ func = "doCloning"
 target = ["greeter.Greeter"]
 func = "doCloningIteratively"
 args = ["3"]
+
+[invoke.thirdGreet]
+target = ["greeter.Greeter"]
+func = "setGreeting"
+args = ["changed a third time"]

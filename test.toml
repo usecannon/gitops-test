@@ -1,15 +1,6 @@
 name = "test-deploy"
 version = "0.0.1"
 
-[setting.owner]
-defaultValue="0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"
-
-[setting.user]
-defaultValue="0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"
-
-[setting.accountId]
-defaultValue = "1"
-
 [provision.greeter]
 source = "greeter:2.10.0"
 
@@ -26,13 +17,3 @@ args = ["changed one last time"]
 [invoke.cloneGreeter]
 target = ["greeter.Greeter"]
 func = "doCloning"
-
-[invoke.cloneGreeters]
-target = ["greeter.Greeter"]
-func = "doCloningIteratively"
-args = ["3"]
-
-[invoke.thirdGreet]
-target = ["greeter.Greeter"]
-func = "setGreeting"
-args = ["changed a third time"]

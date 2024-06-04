@@ -2,7 +2,7 @@ name = "test-deploy"
 version = "0.0.2"
 
 [provision.greeter]
-source = "greeter:2.10.0"
+source = "greeter:latest"
 
 [invoke.greet]
 target = ["greeter.Greeter"]

@@ -1,5 +1,5 @@
-name = "test-deploy"
-version = "0.0.2"
+name = "test-deploy-package"
+version = "0.0.1"
 
 [provision.greeter]
 source = "greeter:latest"

@@ -14,3 +14,11 @@ args = ["changed one more time"]
 target = ["greeter.Greeter"]
 func = "setGreeting"
 args = ["changed one last time"]
+
+[invoke.cloneGreeter]
+target = ["greeter.Greeter"]
+func = "doCloning"
+
+[invoke.cloneGreeterAgain]
+target = ["greeter.Greeter"]
+func = "doCloning"

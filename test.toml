@@ -9,7 +9,3 @@ target = "greeter:latest@with-test"
 target = ["greeter.Greeter"]
 func = "setGreeting"
 args = ["changed one more time"]
-
-[invoke.cloneGreeter]
-target = ["greeter.Greeter"]
-func = "doCloning"

@@ -9,3 +9,16 @@ target = "greeter:2.10.0@with-test"
 target = ["greeter.Greeter"]
 func = "setGreeting"
 args = ["changed one more time"]
+
+[invoke.secondGreet]
+target = ["greeter.Greeter"]
+func = "setGreeting"
+args = ["changed one last time"]
+
+[invoke.cloneGreeter]
+target = ["greeter.Greeter"]
+func = "doCloning"
+
+[invoke.cloneGreeterAgain]
+target = ["greeter.Greeter"]
+func = "doCloning"

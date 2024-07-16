@@ -3,6 +3,7 @@ version = "0.0.1"
 
 [provision.greeter]
 source = "greeter:latest"
+target = "greeter:latest@with-test"
 
 [invoke.greet]
 target = ["greeter.Greeter"]

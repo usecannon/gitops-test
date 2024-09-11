@@ -7,6 +7,8 @@ target = "greeter:2.10.0@with-test"
 
 [invoke.greet]
 target = ["greeter.Greeter"]
+# have a txn that has to come from the gnosis safe.
+from = "0x766b80B3938f409532726c6b8cbefBf571AA8aC8"
 func = "setGreeting"
 args = ["changed one more time"]
 

@@ -1,6 +1,6 @@
 name = "test-deploy-package"
 version = "0.0.1"
-deployers = ["0x766b80B3938f409532726c6b8cbefBf571AA8aC8","0x798578C14c54f415ecf3927AF3db0afd4aFb59cf"]
+deployers = ["0xca7777aB932E8F0b930dE9F0d96f4E9a2a00DdD3", "0x14E0f81A0c60A35D0424c0b08aF3146d16eB98F6"]
 preset = "regre"
 
 [provision.greeter]
@@ -11,7 +11,7 @@ options.salt = "some-value-2"
 [invoke.greet]
 target = ["greeter.Greeter"]
 # have a txn that has to come from the gnosis safe.
-from = "0x766b80B3938f409532726c6b8cbefBf571AA8aC8"
+from = "0x14E0f81A0c60A35D0424c0b08aF3146d16eB98F6"
 func = "setGreeting"
 args = ["to verify upgrade from it"]
 

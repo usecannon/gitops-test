@@ -1,6 +1,7 @@
 name = "test-deploy-package"
 version = "0.0.1"
 deployers = ["0x766b80B3938f409532726c6b8cbefBf571AA8aC8","0x798578C14c54f415ecf3927AF3db0afd4aFb59cf"]
+preset = "regre"
 
 [provision.greeter]
 source = "greeter:2.10.0"

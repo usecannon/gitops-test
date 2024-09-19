@@ -18,7 +18,7 @@ args = ["to verify upgrade from it"]
 [invoke.secondGreet]
 target = ["greeter.Greeter"]
 func = "setGreeting"
-args = ["changed one last time"]
+args = ["change another time"]
 
 [invoke.cloneGreeter]
 target = ["greeter.Greeter"]

@@ -5,6 +5,7 @@ deployers = ["0x766b80B3938f409532726c6b8cbefBf571AA8aC8","0x798578C14c54f415ecf
 [provision.greeter]
 source = "greeter:2.10.0"
 target = "greeter:2.10.0@with-test"
+options.salt = "some-value-2"
 
 [invoke.greet]
 target = ["greeter.Greeter"]

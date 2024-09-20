@@ -1,0 +1,10 @@
+name = "new-test-deploy"
+version = "0.0.1"
+deployers = ["0xca7777aB932E8F0b930dE9F0d96f4E9a2a00DdD3"]
+
+[provision.ownedGreeter]
+source="owned-greeter"
+
+[provision.mintableToken]
+source="mintable-token"
+

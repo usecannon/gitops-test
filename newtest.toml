@@ -16,7 +16,7 @@ options.decimals = "18"
 options.initialSupply = "0"
 options.name = "Token"
 options.owner = "<%= settings.owner %>"
-options.salt = ""
+options.salt = "new-salt"
 
 [clone.trusted_multicall_forwarder]
 source = "trusted-multicall-forwarder"

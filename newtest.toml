@@ -21,6 +21,7 @@ options.salt = ""
 [clone.trusted_multicall_forwarder]
 source = "trusted-multicall-forwarder"
 target = "new-test-deploy@trusted-multicall-forwarder"
+options.salt = "new-salt"
 
 [clone.Proxy]
 source = "transparent-upgradable-proxy"

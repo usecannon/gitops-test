@@ -7,11 +7,11 @@ owner = "0xca7777aB932E8F0b930dE9F0d96f4E9a2a00DdD3"
 
 [clone.OwnedGreeter]
 source = "owned-greeter"
-target = "new-test-deploy@owned-greeter"
+target = "new-deploy-test@owned-greeter"
 
 [clone.MintableToken]
 source = "mintable-token"
-target = "new-test-deploy@MintableToken"
+target = "new-deploy-test@MintableToken"
 options.decimals = "18"
 options.initialSupply = "0"
 options.name = "Token"
@@ -20,7 +20,7 @@ options.salt = "new-salt"
 
 [clone.trusted_multicall_forwarder]
 source = "trusted-multicall-forwarder"
-target = "new-test-deploy@trusted-multicall-forwarder"
+target = "new-deploy-test@trusted-multicall-forwarder"
 options.salt = "new-salt"
 
 [clone.Proxy]

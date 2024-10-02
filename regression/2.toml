@@ -1,0 +1,9 @@
+version = "0.0.2"
+
+include = ["1.toml"]
+
+[invoke.secondGreet]
+from = "<%= settings.owner %>"
+target = ["greeter.Greeter"]
+func = "setGreeting"
+args = ["updated greet"]

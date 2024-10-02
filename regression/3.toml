@@ -1,0 +1,13 @@
+version = "0.0.3"
+include = ["2.toml"]
+
+deployers = [
+  "0x7f28058F0b989430C7397782F797e300CDc10042",
+  "0xca7777aB932E8F0b930dE9F0d96f4E9a2a00DdD3",
+]
+
+[invoke.secondGreet]
+from = "<%= settings.owner %>"
+target = ["greeter.Greeter"]
+func = "setGreeting"
+args = ["third-greet"]

@@ -1,4 +1,4 @@
-name = "test-deploy-package"
+name = "usecannon-gitops-test"
 version = "0.0.1"
 preset = "regre"
 
@@ -7,7 +7,7 @@ owner = "0x7f28058F0b989430C7397782F797e300CDc10042"
 
 [clone.greeter]
 source = "greeter:2.10.0"
-target = "test-deploy-package:0.0.1@regre-greeter"
+target = "usecannon-gitops-test:0.0.1@regre-greeter"
 
 [invoke.greet]
 target = ["greeter.Greeter"]
